@@ -1,0 +1,22 @@
+GET http://127.0.0.1:8000/api/crawlers
+
+###
+
+POST http://127.0.0.1:8000/api/crawler HTTP/1.1
+content-type: application/json
+
+{
+    "url": "https://web.telegram.org",
+    "depth": 1,
+}
+
+###
+
+POST http://127.0.0.1:8000/api/crawler HTTP/1.1
+content-type: application/json
+
+{
+    "url": "http://127.0.0.1:8000/api/crawler",
+    "depth": 3,
+    "parent": "http://127.0.0.1:8000"
+}
